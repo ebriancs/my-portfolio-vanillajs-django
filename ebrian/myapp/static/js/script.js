@@ -1,3 +1,4 @@
+/*
 window.addEventListener('load', function() {
     const loading = document.getElementById('loading');
     const content = document.getElementById('content');
@@ -8,6 +9,7 @@ window.addEventListener('load', function() {
         content.style.display = 'block';
     }, 3100);
 });
+*/
 
 function wordChanger() {
     var words = ['Programmer', 'Developer', 'Data Analyst'],
@@ -61,8 +63,7 @@ wordChanger();
 function character1Animation() {
     window.addEventListener('load', function() {
         const character1 = document.querySelector('.character-1');
-        character1.style.animation = 'characterFloating 3s ease-in-out infinite';
-        //character1.style.animation = 'character1Entrance 5s ease-out forwards, characterFloating 3s ease infinite';
+        character1.style.animation = 'character1Entrance 5s ease-out forwards, characterFloating 3s ease infinite';
     });
 }
 character1Animation();
