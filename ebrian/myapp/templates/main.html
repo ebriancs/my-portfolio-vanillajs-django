@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>myPortfolio</title>
+</head>
+<body>
+    <div id="loading" class="loading">
+        <h1>LOADING..</h1>
+    </div>
+    <div id="content" class="content">
+        <div class="container main"><!--MAIN-->
+            <div class="container navigation"><!--NAVIGATION-->
+                <img id="logo" src="{% static 'images/main/logo.png' %}" alt="">
+                <nav>
+                    <ul>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="/">Home</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="container introduction"><!--INTRODUCTION-->
+                <h1>
+                    <span>E</span>
+                    <span>B</span>
+                    <span>R</span>
+                    <span>I</span>
+                    <span>A</span>
+                    <span>N</span>
+                </h1>
+                <p>I'm a <span></span></p>
+            </div>
+            <div class="character-1"><!--CHARACTER 1-->
+                <img src="{% static 'images/vecteezy/img1.png' %}" alt="Vecteezy 1">
+                <div></div>
+            </div>
+        </div>
+        <div id="skills" class="container skills"><!--SKILLS-->
+            <div class="skills-div-1">
+                <div class="skills-div-2">
+                    <h3>DATA ANALYSIS</h3>
+                    <ul>
+                        <li>Pandas</li>
+                        <li>Numpy</li>
+                        <li>Matplotlib</li>
+                        <li>Seaborn</li>
+                        <li>Plotly</li>
+                    </ul>
+                </div>
+                <div class="skills-div-2">
+                    <h3>FRONT-END DEVELOPMENT</h3>
+                    <ul>
+                        <li>HTML&nbsp;<img src="{% static 'images/skills/html.png' %}" alt=""></li>
+                        <li>CSS&nbsp;<img src="{% static 'images/skills/css.png' %}" alt=""></li>
+                        <li>JavaScript&nbsp;<img src="{% static 'images/skills/javascript.png' %}" alt=""></li>
+                        <li>Bootstrap&nbsp;<img src="{% static 'images/skills/bootstrap.png' %}" alt=""></li>
+                        <li>JQuery&nbsp;<img src="{% static 'images/skills/jquery.png' %}" alt="">, React&nbsp;<img src="{% static 'images/skills/react.png' %}" alt=""></li>
+                    </ul>
+                </div>
+                <div class="skills-div-2">
+                    <h3>BACK-END DEVELOPMENT</h3>
+                    <ul>
+                        <li>Python&nbsp;<img src="{% static 'images/skills/python.png' %}" alt=""></li>
+                        <li>SQL&nbsp;<img src="{% static 'images/skills/sql.png' %}" alt=""></li>
+                        <li>Django&nbsp;<img src="{% static 'images/skills/django.png' %}" alt="">, Flask&nbsp;<img src="{% static 'images/skills/flask.png' %}" alt=""></li>
+                        <li>Sqlite3&nbsp;<img src="{% static 'images/skills/sqlite3.png' %}" alt="">, MySQL&nbsp;<img src="{% static 'images/skills/mysql.png' %}" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="character-2"><!--CHARACTER 2-->
+                <img src="{% static 'images/vecteezy/img2.png' %}" alt="Vecteezy 2">
+                <div></div>
+            </div>
+            <div class="skills-title"><!--TITLE-->
+                <h1>SKILLS</h1>
+            </div>
+        </div>
+        <div id="projects" class="container projects"><!--PROJECTS-->
+            <div class="character-3"><!--CHARACTER 3-->
+                <img src="{% static 'images/vecteezy/img3.png' %}" alt="Vecteezy 3">
+                <div></div>
+            </div>
+            <div class="title-projects"><!--TITLE-->
+                <h1>PROJECTS</h1>
+            </div>
+        </div>
+        <div id="contact" class="container contact"><!--CONTACT-->
+            <div class="title-contact"><!--TITLE-->
+                <h1>CONTACT</h1>
+            </div>
+        </div>
+        <div class="container footer"><!--FOOTER-->
+    
+        </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
