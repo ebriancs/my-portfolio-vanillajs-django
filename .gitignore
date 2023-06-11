@@ -1,0 +1,12 @@
+# ignore virtual environment
+venv/
+
+# ignore vscode files
+.vscode/
+
+# ignore databases
+*.sqlite3
+
+# ignore pycache
+*__pycache__/
+*.pyc
