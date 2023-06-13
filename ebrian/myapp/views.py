@@ -7,3 +7,7 @@ from myapp.models import Project
 def main(request):
     template = loader.get_template('main.html')
     return HttpResponse(template.render())
+
+def projects(request):
+    data = Project.objects.all()
+    return render(request, 'main.html', {'data': data})
