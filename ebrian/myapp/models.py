@@ -5,3 +5,6 @@ class Project(models.Model):
     project_name = models.CharField(max_length=50)
     project_description = models.TextField()
     project_link = models.URLField()
+
+    def __str__(self):
+        return f'{self.project_name}'
