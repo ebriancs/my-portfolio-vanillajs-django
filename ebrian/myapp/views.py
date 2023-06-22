@@ -5,9 +5,9 @@ from myapp.models import Project
 
 # Create your views here.
 def main(request):
+    projects_data = Project.objects.all()
     template = loader.get_template('main.html')
-    return HttpResponse(template.render())
-
-def projects(request):
-    data = Project.objects.all()
-    return render(request, 'main.html', {'data': data})
+    context = {
+        'projects_data': projects_data,
+    }
+    return HttpResponse(template.render(context, request))

@@ -1,0 +1,115 @@
+#contact {
+    background-color: transparent;
+    position: relative;
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+    overflow: normal;
+    border-bottom: 1px solid whitesmoke;
+}
+.contact-div-1 {
+    background-color: darkolivegreen;
+    position: absolute;
+    bottom: -10%;
+    right: 5%;
+    transform: perspective(800px) rotateX(60deg);
+    transform-style: preserve-3d;
+    transform-origin: bottom center;
+    opacity: 1;
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+    border-bottom: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+#contact-profile {
+    background-color: rgb(30, 30, 30);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    border: 1px solid darkolivegreen;
+    border-radius: 0 0 0 50%;
+    box-shadow: 2px -2px 8px rgba(85, 107, 47, 0.8);
+}
+#contact-text {
+    background-color: rgb(30, 30, 30);
+    position: absolute;
+    left: 0;
+    width: 60%;
+    height: 40%;
+    padding: 0;
+    overflow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contact-text p {
+    padding: 10px;
+    text-align: justify;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+#contact-text h1 {
+    position: absolute;
+    bottom: -30%;
+    font-size: x-large;
+}
+#contact-text h3 {
+    position: absolute;
+    bottom: -40%;
+    font-size: medium;
+}
+.contact-div-2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+.contact-div-3, .contact-div-4 {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+.contact-div-3 i, .contact-div-4 h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+.contact-div-3 i {
+    font-size: 40px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+.contact-div-3 i:hover {
+    transform: scale(1.2);
+}
+.fa-linkedin-square:hover {
+    color: #0A66C2;
+}
+.fa-github:hover {
+    color: #28A745;
+}
+.fa-envelope-square:hover {
+    color: burlywood;
+}
+.fa-phone-square:hover {
+    color: aquamarine;
+}
+
+/*ANIMATION*/
+@keyframes contact-div-1-entrance {
+    from {
+        transform: perspective(800px) rotateX(60deg);
+    }
+    to {
+        transform: perspective(800px) rotateX(0deg);
+    }
+}
+.contact-div-1-animation {
+    animation: contact-div-1-entrance 2s ease-out forwards;
+}

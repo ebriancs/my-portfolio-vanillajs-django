@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            background-color: gray;
+            width: 100vw;
+            height: 100vh;
+            display: none;
+        }
+        .empty {
+            background-color: darkred;
+            position: absolute;
+            top: calc(50% - 30%);
+            left: calc(50% - 30%);
+            width: 60vw;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+    </div>
+    <div class="empty">
+        <h1>CURRENTLY DISABLED IN MOBILE DEVICES</h1>
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+            disablePage();
+            window.addEventListener('resize', disablePage);
+        });
+
+        function disablePage() {
+            const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            const screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            const minScreenWidth = 1200;
+            const minScreenHeight = 600;
+
+            const mainDiv = document.querySelector('.main');
+            const emptyDiv = document.querySelector('.empty');
+
+            if(screenWidth >= minScreenWidth && screenHeight >= minScreenHeight) {
+                mainDiv.style.display = 'block';
+                emptyDiv.style.display = 'none';
+            } else {
+                mainDiv.style.display = 'none';
+                emptyDiv.style.display = 'flex';
+            }
+        }
+    </script>
+</body>
+</html>
