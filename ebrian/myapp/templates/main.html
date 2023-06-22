@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{% static 'css/achievements.css' %}">
     <link rel="stylesheet" href="{% static 'css/contact.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/details.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Main</title>
@@ -35,12 +36,16 @@
             {% include 'achievements.html' %}
         </div>
     
-        <div id="con-4" class="container">
-            {% include 'contact.html' %}<!--CONTAINER 4-->
+        <div id="con-4" class="container"><!--CONTAINER 4-->
+            {% include 'contact.html' %}
         </div>
     
-        <div id="con-5" class="container">
-            {% include 'footer.html' %}<!--CONTAINER 5-->
+        <div id="con-5" class="container"><!--CONTAINER 5-->
+            {% include 'footer.html' %}
+        </div>
+
+        <div id="con-6" class="container"><!--CONTAINER 6-->
+            {% include 'details.html' %}
         </div>
     </div>
 
