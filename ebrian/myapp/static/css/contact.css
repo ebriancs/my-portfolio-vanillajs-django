@@ -80,7 +80,11 @@
     padding: 0;
     margin: 0;
 }
+.contact-div-3 a {
+    color: transparent;
+}
 .contact-div-3 i {
+    color: whitesmoke;
     font-size: 40px;
     padding: 10px;
     transition: transform 0.3s ease;

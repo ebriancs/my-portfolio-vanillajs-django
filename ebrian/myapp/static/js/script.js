@@ -305,7 +305,7 @@ function testing_contact_footer() {
         }, 1000);
     });
 }
-//testing_contact_footer();
+testing_contact_footer();
 
 function testing_skills() {
     window.addEventListener('load', function() {
@@ -459,4 +459,4 @@ function testing_achievements() {
     }
     slider();
 }
-testing_achievements();
+//testing_achievements();

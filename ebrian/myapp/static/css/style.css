@@ -33,11 +33,11 @@ body {
     display: none;
 }
 #con-3 { /*ACHIEVEMENTS*/
-    display: block;
+    display: none;
 }
 #con-4 { /*CONTACT*/
-    display: none;
+    display: block;
 }
 #con-5 { /*FOOTER*/
-    display: none;
+    display: block;
 }
