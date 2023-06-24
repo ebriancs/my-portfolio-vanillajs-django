@@ -38,14 +38,14 @@
     
         <div id="con-4" class="container"><!--CONTAINER 4-->
             {% include 'contact.html' %}
+
+            <div id="con-6" class="container"><!--CONTAINER 6-->
+                {% include 'details.html' with myname=myname myemail=myemail mygender=mygender mybirth=mybirth myheight=myheight myweight=myweight mynumber=mynumber %}
+            </div>
         </div>
     
         <div id="con-5" class="container"><!--CONTAINER 5-->
             {% include 'footer.html' %}
-        </div>
-
-        <div id="con-6" class="container"><!--CONTAINER 6-->
-            {% include 'details.html' %}
         </div>
     </div>
 

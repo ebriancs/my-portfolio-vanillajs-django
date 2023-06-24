@@ -36,8 +36,14 @@ body {
     display: none;
 }
 #con-4 { /*CONTACT*/
-    display: block;
+    display: none;
 }
 #con-5 { /*FOOTER*/
+    display: none;
+}
+#con-6 { /*DETAILS*/
+    display: none;
+}
+#con-4, #con-5, #con-6 {
     display: block;
 }

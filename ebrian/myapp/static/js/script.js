@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
 function disableHTML() {
     const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     const screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-    const minScreenWidth = 1200;
+    const minScreenWidth = 600;
     const minScreenHeight = 600;
 
     const contentDiv = document.getElementById('content');
@@ -296,16 +296,41 @@ function footerHTML() {
 
 }
 
-function testing_contact_footer() {
-    window.addEventListener('load', function() {
-        const contact_div_1 = document.querySelector('.contact-div-1');
+function testing_bottom() { // CONTACT, FOOTER, DETAILS
+    // VARIABLES
+    const contact_div_1 = document.querySelector('.contact-div-1');
+    const details_i = document.getElementById('details-i');
+    const details_tr = document.querySelectorAll('#details tr');
 
+    window.addEventListener('load', function() {
         setTimeout(function() {
             contact_div_1.classList.add('contact-div-1-animation');
+
+            contact_div_1.addEventListener('animationend', function() {
+                
+                let details_active = true; // STATUS
+                details_i.addEventListener('click', function() {
+                    if(details_active) { // ENTRANCE
+                        Array.from(details_tr).forEach(function(element, index) {
+                            setTimeout(function() {
+                                element.style.animation = "details-tr-entrance 1s ease both";
+                            }, index * 200);
+                        });
+                        details = false;
+                    } else { // EXIT
+                        Array.from(details_tr).forEach(function(element, index) {
+                            setTimeout(function() {
+                                element.style.animation = "details-tr-exit 1s ease both";
+                            }, index * 200);
+                        });
+                        details_active = true;
+                    }
+                });
+            });
         }, 1000);
-    });
+    }); 
 }
-testing_contact_footer();
+testing_bottom();
 
 function testing_skills() {
     window.addEventListener('load', function() {
