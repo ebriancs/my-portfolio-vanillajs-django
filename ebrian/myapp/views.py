@@ -1,30 +1,63 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from myapp.models import Project
-from myapp.models import Profile
+from myapp.models import Project, Profile
+from .forms import MessageForm
+from django.core.mail import send_mail
 
 # Create your views here.
+
+# MESSAGES
+def message(request):
+    context = {}
+
+    if request.method == 'POST':
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            form.save()
+            context['form'] = form
+            context['success'] = True
+            return context
+    else:
+        form = MessageForm()
+    
+    context['form'] = form
+    context['success'] = False
+    return context
+
+# PROJECTS
+def project(request):
+    data = Project.objects.all()
+    context = {
+        'data': data,
+    }
+    return context
+
+# PROFILES
+def profile(request):
+    data = Profile.objects.get(id=1)
+    context = {
+        'name': data.name,
+        'email': data.email,
+        'phone': data.phone,
+        'gender': data.gender,
+        'birth': data.birth,
+        'height': data.height,
+        'weight': data.weight,
+    }
+    return context
+
+# MAIN
 def main(request):
     template = loader.get_template('main.html')
 
-    projects_data = Project.objects.all()
-    profiles_data = Profile.objects.get(id=1)
+    profiles_context = profile(request)
+    projects_context = project(request)
+    messages_context = message(request)
 
-    projects_context = {
-        'projects_data': projects_data,
-    }
-    profiles_context = {
-        'myname': profiles_data.myName,
-        'myemail': profiles_data.myEmail,
-        'mygender': profiles_data.myGender,
-        'mybirth': profiles_data.myBirth,
-        'myheight': profiles_data.myHeight,
-        'myweight': profiles_data.myWeight,
-        'mynumber': profiles_data.myNumber,
-    }
     context = {}
-    context.update(projects_context)
     context.update(profiles_context)
+    context.update(projects_context)
+    context.update(messages_context)
 
     return HttpResponse(template.render(context, request))

@@ -98,12 +98,6 @@
 .fa-github:hover {
     color: #28A745;
 }
-.fa-envelope-square:hover {
-    color: burlywood;
-}
-.fa-address-card-o:hover {
-    color: aquamarine;
-}
 
 /*ANIMATION*/
 @keyframes contact-div-1-entrance {

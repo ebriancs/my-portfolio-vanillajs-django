@@ -1,0 +1,77 @@
+#message {
+    background-color: gray;
+    position: absolute;
+    top: calc(50% - 40%);
+    left: calc(50% - 30%);
+    width: 60%;
+    height: 80%;
+    z-index: 2;
+    display: none;
+    border-radius: 5px;
+}
+#message-btn-close {
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    font-size: 32px;
+    transition: transform 0.3s ease;
+}
+#message-btn-close:hover {
+    transform: scale(1.1);
+}
+.message-div {
+    background-color: darkgray;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 40%);
+    width: 80%;
+    height: 80%;
+}
+.message-form {
+    background-color: brown;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.message-form p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.message-form p label {
+    width: 20%;
+    padding-left: 10px;
+}
+.message-form p input, .message-form p textarea {
+    width: 60%;
+    padding: 10px;
+    margin: 3px 0;
+    border: 1px solid whitesmoke;
+    border-radius: 3px;
+}
+@keyframes message-entrance {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes message-exit {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.9);
+        opacity: 0;
+        display: none;
+    }
+}

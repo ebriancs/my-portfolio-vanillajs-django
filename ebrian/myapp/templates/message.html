@@ -1,0 +1,16 @@
+{% load static %}
+
+<div id="message">
+    <button id='message-btn-close'>&#10006</button>
+    <div class="message-div">
+        {% if success %}
+            <p>Form submitted successfully!</p>
+        {% endif %}
+
+        <form action="" method="post" class="message-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>

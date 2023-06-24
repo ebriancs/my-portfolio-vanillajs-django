@@ -44,6 +44,9 @@ body {
 #con-6 { /*DETAILS*/
     display: none;
 }
-#con-4, #con-5, #con-6 {
+#con-7 { /*MESSAGE*/
+    display: none;
+}
+#con-4, #con-5, #con-6, #con-7 {
     display: block;
 }

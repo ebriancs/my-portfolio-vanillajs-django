@@ -292,6 +292,49 @@ function contactHTML() {
     });
 }
 
+function detailsHTML() {
+    const details_i = document.getElementById('details-i');
+    const details_tr = document.querySelectorAll('#details tr');
+
+    let details_active = true; // STATUS
+    details_i.addEventListener('click', function() {
+        if(details_active) { // ENTRANCE
+            Array.from(details_tr).forEach(function(element, index) {
+                setTimeout(function() {
+                    element.style.animation = "details-tr-entrance 1s ease both";
+                }, index * 200);
+            });
+            details_active = false;
+        } else { // EXIT
+            Array.from(details_tr).forEach(function(element, index) {
+                setTimeout(function() {
+                    element.style.animation = "details-tr-exit 1s ease both";
+                }, index * 200);
+            });
+            details_active = true;
+        }
+    });
+}
+
+function messageHTML() {
+    const message = document.getElementById('message');
+    const message_i = document.getElementById('message-i');
+    const message_btn_close = document.getElementById('message-btn-close');
+
+    message_i.addEventListener('click', function() { // OPEN MESSAGE
+        message.style.display = 'block';
+        message.style.animation = 'message-entrance 0.5s ease both';
+    });
+
+    message_btn_close.addEventListener('click', function() { // CLOSE MESSAGE
+        message.style.animation = 'message-exit 0.5s ease forwards';
+        message.addEventListener('animationend', function() {
+            message.style.display = 'none';
+            message.style.animation = '';
+        }, { once: true });
+    });
+}
+
 function footerHTML() {
 
 }
@@ -299,33 +342,17 @@ function footerHTML() {
 function testing_bottom() { // CONTACT, FOOTER, DETAILS
     // VARIABLES
     const contact_div_1 = document.querySelector('.contact-div-1');
-    const details_i = document.getElementById('details-i');
-    const details_tr = document.querySelectorAll('#details tr');
 
     window.addEventListener('load', function() {
         setTimeout(function() {
             contact_div_1.classList.add('contact-div-1-animation');
 
             contact_div_1.addEventListener('animationend', function() {
-                
-                let details_active = true; // STATUS
-                details_i.addEventListener('click', function() {
-                    if(details_active) { // ENTRANCE
-                        Array.from(details_tr).forEach(function(element, index) {
-                            setTimeout(function() {
-                                element.style.animation = "details-tr-entrance 1s ease both";
-                            }, index * 200);
-                        });
-                        details_active = false;
-                    } else { // EXIT
-                        Array.from(details_tr).forEach(function(element, index) {
-                            setTimeout(function() {
-                                element.style.animation = "details-tr-exit 1s ease both";
-                            }, index * 200);
-                        });
-                        details_active = true;
-                    }
-                });
+                // DETAILS
+                detailsHTML();
+
+                // EMAIL
+                messageHTML();
             });
         }, 1000);
     }); 
@@ -416,8 +443,13 @@ function testing_achievements() {
                 setTimeout(function() {
                     const con4 = document.getElementById('con-4');
                     const con5 = document.getElementById('con-5');
+                    const con6 = document.getElementById('con-6');
+                    const con7 = document.getElementById('con-7');
+
                     con4.style.display = 'block';
                     con5.style.display = 'block';
+                    con6.style.display = 'block';
+                    con7.style.display = 'block';
 
                     console.log('contactHTML & footerHTML activated');
                     contactHTML();
