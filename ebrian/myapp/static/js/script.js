@@ -316,7 +316,7 @@ function testing_bottom() { // CONTACT, FOOTER, DETAILS
                                 element.style.animation = "details-tr-entrance 1s ease both";
                             }, index * 200);
                         });
-                        details = false;
+                        details_active = false;
                     } else { // EXIT
                         Array.from(details_tr).forEach(function(element, index) {
                             setTimeout(function() {
