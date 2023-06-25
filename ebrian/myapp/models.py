@@ -9,7 +9,7 @@ class Project(models.Model):
     project_link = models.URLField()
 
     def __str__(self):
-        return f'{self.project_name}'
+        return f'[{self.id}] {self.project_name}'
 
 # PROFILE
 class Profile(models.Model):
@@ -27,7 +27,7 @@ class Profile(models.Model):
     weight = models.IntegerField()
 
     def __str__(self):
-        return f'{self.id} {self.name}'
+        return f'[{self.id}] {self.name}'
 
 # MESSAGE
 class Message(models.Model):
@@ -37,5 +37,5 @@ class Message(models.Model):
     message = models.TextField()
 
     def __str__(self):
-        return f'{self.name} {self.subject}'
+        return f'[{self.id}] {self.name} / {self.email} / ({self.subject}) {self.message}'
     

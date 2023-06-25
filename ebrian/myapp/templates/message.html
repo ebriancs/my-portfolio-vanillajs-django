@@ -1,16 +1,17 @@
 {% load static %}
 
-<div id="message">
-    <button id='message-btn-close'>&#10006</button>
-    <div class="message-div">
-        {% if success %}
-            <p>Form submitted successfully!</p>
-        {% endif %}
-
+<div id="message" class="message-div-1">
+    <button id='message-btn-close' class="message-btn">&#10006</button>
+    <div class="message-div-2">
+        <h2>Hi! Let's connect</h2>
         <form action="" method="post" class="message-form">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Submit</button>
+            {% for field in form %}
+                <div id="message-form-div-{{ field.label|lower }}" class="message-form-div">
+                    {{ field }}
+                </div>
+            {% endfor %}
+            <button id="message-form-btn-submit" class="message-form-btn" type="submit">Submit</button>
         </form>
     </div>
 </div>

@@ -1,28 +1,34 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 from myapp.models import Project, Profile
 from .forms import MessageForm
 from django.core.mail import send_mail
+from django.contrib import messages
 
 # Create your views here.
 
 # MESSAGES
 def message(request):
     context = {}
-
     if request.method == 'POST':
         form = MessageForm(request.POST)
         if form.is_valid():
             form.save()
-            context['form'] = form
-            context['success'] = True
+            context = {
+                'form': form,
+                'success': True,
+            }
             return context
+        else:
+            messages.error(request, 'Form submission failed!')
     else:
         form = MessageForm()
     
-    context['form'] = form
-    context['success'] = False
+    context = {
+        'form': form,
+        'success': False,
+    }
     return context
 
 # PROJECTS
