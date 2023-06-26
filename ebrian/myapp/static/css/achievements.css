@@ -1,4 +1,5 @@
 #achievements {
+    background-color: rgb(20, 20, 20);
     position: relative;
     height: 100vh;
     margin: 0;
@@ -93,9 +94,6 @@
         opacity: 1;
     }
 }
-.achievements-div-1-animation {
-    animation: achievements-div-1-entrance 1s ease forwards;
-}
 @keyframes achievements-div-2-entrance {
     0% {
         opacity: 0;
@@ -111,9 +109,6 @@
     100% {
         opacity: 1;
     }
-}
-.achievements-div-2-animation {
-    animation: achievements-div-2-entrance 1s ease-out forwards;
 }
 @keyframes achievements-title-entrance {
     0% {
@@ -123,7 +118,4 @@
     100% {
         opacity: 1;
     }
-}
-.achievements-title-animation {
-    animation: achievements-title-entrance 1s ease forwards;
 }

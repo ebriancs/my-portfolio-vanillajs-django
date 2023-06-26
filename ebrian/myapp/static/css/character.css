@@ -19,7 +19,7 @@
     height: 90%;
 }
 #character-1 div {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(25, 25, 25);
     position: relative;
     bottom: 60px;
     z-index: 1;
@@ -37,6 +37,7 @@
     border-bottom: 10px solid cyan;
     border-left: 5px solid cyan;
     border-right: 1px solid cyan;
+    box-shadow: 0px 4px 4px rgba(0, 255, 255, 0.8);
     transform: scale(1.2);
 }
 #character-1 div.active {
@@ -44,6 +45,7 @@
     border-bottom: 10px solid cyan;
     border-left: 5px solid cyan;
     border-right: 1px solid cyan;
+    box-shadow: 0px 4px 4px rgba(0, 255, 255, 0.8);
     transform: scale(1.2);
 }
 @keyframes character-1-floating { /*CHARACTER 1 ANIMATION*/
@@ -87,12 +89,6 @@
         opacity: 1;
     }
 }
-.character-1-animation {
-    animation: character-1-floating 3s ease-in-out infinite, character-1-entrance 2s ease-in-out forwards;
-}
-.character-1-img-animation {
-    animation: character-1-img-entrance 2s ease-out forwards;
-}
 
 /*CHARACTER 2*/
 #character-2 {
@@ -115,7 +111,7 @@
     height: 90%;
 }
 #character-2 div {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(25, 25, 25);
     position: relative;
     bottom: 60px;
     z-index: 1;
@@ -133,6 +129,7 @@
     border-bottom: 10px solid cyan;
     border-left: 1px solid cyan;
     border-right: 5px solid cyan;
+    box-shadow: 0px 4px 4px rgba(0, 255, 255, 0.8);
     transform: scale(1.2);
 }
 #character-2 div.active {
@@ -140,6 +137,7 @@
     border-bottom: 10px solid cyan;
     border-left: 1px solid cyan;
     border-right: 5px solid cyan;
+    box-shadow: 0px 4px 4px rgba(0, 255, 255, 0.8);
     transform: scale(1.2);
 }
 @keyframes character-2-floating { /*CHARACTER 2 ANIMATION*/
@@ -182,12 +180,6 @@
         opacity: 1;
     }
 }
-.character-2-animation {
-    animation: character-2-floating 3s ease-in-out infinite, character-2-entrance 1s ease-in-out forwards;
-}
-.character-2-img-animation {
-    animation: character-2-img-entrance 2s ease-out forwards;
-}
 
 /*CHARACTER 3*/
 #character-3 {
@@ -210,7 +202,7 @@
     height: 90%;
 }
 #character-3 div {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(25, 25, 25);
     position: relative;
     bottom: 60px;
     z-index: 1;
@@ -228,6 +220,7 @@
     border-bottom: 10px solid cyan;
     border-left: 5px solid cyan;
     border-right: 1px solid cyan;
+    box-shadow: 0px 4px 4px rgba(0, 255, 255, 0.8);
     transform: scale(1.2);
 }
 #character-3 div.active {
@@ -235,6 +228,7 @@
     border-bottom: 10px solid cyan;
     border-left: 5px solid cyan;
     border-right: 1px solid cyan;
+    box-shadow: 0px 4px 4px rgba(0, 255, 255, 0.8);
     transform: scale(1.2);
 }
 @keyframes character-3-floating { /*CHARACTER 3 ANIMATION*/
@@ -276,10 +270,4 @@
     100% {
         opacity: 1;
     }
-}
-.character-3-animation {
-    animation: character-3-floating 3s ease-in-out infinite, character-3-entrance 1s ease-in-out forwards;
-}
-.character-3-img-animation {
-    animation: character-3-img-entrance 2s ease-out forwards;
 }

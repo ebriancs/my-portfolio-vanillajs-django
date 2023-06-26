@@ -2,8 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 from myapp.models import Project, Profile
-from .forms import MessageForm
-from django.core.mail import send_mail
+from myapp.forms import MessageForm
 from django.contrib import messages
 
 # Create your views here.
@@ -15,19 +14,15 @@ def message(request):
         form = MessageForm(request.POST)
         if form.is_valid():
             form.save()
+            form = MessageForm()
             context = {
                 'form': form,
-                'success': True,
             }
-            return context
-        else:
-            messages.error(request, 'Form submission failed!')
     else:
         form = MessageForm()
     
     context = {
         'form': form,
-        'success': False,
     }
     return context
 

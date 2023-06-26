@@ -27,7 +27,7 @@ body {
     display: block;
 }
 #con-1 { /*BASE*/
-    display: none;
+    display: block;
 }
 #con-2 { /*SKILLS*/
     display: none;
@@ -40,13 +40,4 @@ body {
 }
 #con-5 { /*FOOTER*/
     display: none;
-}
-#con-6 { /*DETAILS*/
-    display: none;
-}
-#con-7 { /*MESSAGE*/
-    display: none;
-}
-#con-4, #con-5, #con-6, #con-7 {
-    display: block;
 }

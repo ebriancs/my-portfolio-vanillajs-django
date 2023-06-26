@@ -1,5 +1,5 @@
 #contact {
-    background-color: transparent;
+    background-color: rgb(20, 20, 20);
     position: relative;
     height: 60vh;
     margin: 0;
@@ -107,7 +107,4 @@
     to {
         transform: perspective(800px) rotateX(0deg);
     }
-}
-.contact-div-1-animation {
-    animation: contact-div-1-entrance 2s ease-out forwards;
 }

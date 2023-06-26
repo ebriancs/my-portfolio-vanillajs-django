@@ -1,10 +1,10 @@
 #message {
   background-color: darkslategray;
   position: absolute;
-  top: calc(50% - 30%);
+  top: calc(50% - 25%);
   left: calc((50% - 20%) - 40px);
   width: 40%;
-  height: 60%;
+  height: 100%;
   padding: 20px 40px;
   z-index: 2;
   display: none;

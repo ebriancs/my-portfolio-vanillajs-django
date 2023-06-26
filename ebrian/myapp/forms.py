@@ -1,5 +1,5 @@
 from django import forms
-from .models import Message
+from myapp.models import Message
 
 class MessageForm(forms.ModelForm):
     name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Your Name'}))

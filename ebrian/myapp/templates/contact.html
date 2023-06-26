@@ -26,4 +26,8 @@
             </div>
         </div>
     </div>
+
+    {% include 'details.html' with name=name email=email phone=phone gender=gender birth=birth height=height weight=weight %}
+
+    {% include 'message.html' with success=success form=form %}
 </div>
