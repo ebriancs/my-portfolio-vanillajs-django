@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
 function disableHTML() {
     const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     const screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-    const minScreenWidth = 600;
+    const minScreenWidth = 1200;
     const minScreenHeight = 600;
 
     const contentDiv = document.getElementById('content');
