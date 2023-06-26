@@ -1,0 +1,93 @@
+#message {
+  background-color: darkslategray;
+  position: absolute;
+  top: calc(50% - 25%);
+  left: calc((50% - 20%) - 40px);
+  width: 40%;
+  height: 100%;
+  padding: 20px 40px;
+  z-index: 2;
+  display: none;
+  border-radius: 5px;
+}
+#message-btn-close {
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+#message-btn-close:hover {
+  transform: scale(1.1);
+}
+.message-div-2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.message-div-2 h2 {
+  text-align: center;
+  flex-basis: 100%;
+  width: 100%;
+}
+.message-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.message-form-div {
+  margin: 2px;
+}
+#message-form-div-name, 
+#message-form-div-email {
+  flex-basis: calc(50% - 4px);
+}
+#message-form-div-subject,
+#message-form-div-message {
+  flex-basis: 100%;
+}
+.message-form-div input,
+.message-form-div textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid whitesmoke;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+#message-form-btn-submit {
+  background-color: whitesmoke;
+  width: 30%;
+  margin: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  transition: transform 0.3s ease;
+}
+#message-form-btn-submit:hover {
+  transform: scale(0.95);
+}
+@keyframes message-entrance {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes message-exit {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.9);
+        opacity: 0;
+        display: none;
+    }
+}
