@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
 function disableHTML() {
     const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     const screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-    const minScreenWidth = 1200;
+    const minScreenWidth = 600;
     const minScreenHeight = 600;
 
     const contentDiv = document.getElementById('content');
@@ -73,42 +73,15 @@ function baseHTML() {
         });
     }
     introduction();
-    
-    // CHARACTER 1
-    function character1() {
-        // VARIABLES
-        const character = document.querySelector('#character-1'); // character 1
-        const character_img = document.querySelector('#character-1 img'); // character 1 img
-        const character_div = document.querySelector('#character-1 div'); // character 1 surf board
 
-        // BEGIN
-        character.style.animation = 'character-1-floating 3s ease-in-out infinite, character-1-entrance 2s ease-in-out forwards'; // character 1 entrance
-    
-        character.addEventListener('animationend', function() {
-            setTimeout(function() {
-                character_div.classList.add('active'); // activate character 1 surf board
-            }, 200); // delay
-            setTimeout(function() {
-                character_img.style.animation = 'character-1-img-entrance 2s ease-out forwards'; // character 1 image entrance
-            }, 400); // delay
+    setTimeout(function() {
+        const con2 = document.getElementById('con-2');
+        con2.style.display = 'block'; // display skills container
 
-            character_img.addEventListener('animationend', function() {
-                setTimeout(function() {
-                    character_div.classList.remove('active'); // deactivate character 1 surf board
-
-                    setTimeout(function() {
-                        const con2 = document.getElementById('con-2');
-                        con2.style.display = 'block'; // display skills container
-
-                        // FUNCTION CALL
-                        console.log('skillsHTML activated');
-                        skillsHTML();
-                    }, 1000); // delay
-                }, 400); // delay
-            }, { once: true }); // execute once
-        }, { once: true }); // execute once
-    }
-    character1();
+        // FUNCTION CALL
+        console.log('skillsHTML activated');
+        skillsHTML();
+    }, 1000); // delay
 }
 
 function skillsHTML() {
@@ -118,9 +91,9 @@ function skillsHTML() {
     const skills_div_2 = document.querySelector('.skills-div-2');
     const skills_div_3 = document.querySelectorAll('.skills-div-3');
     const skills_title = document.querySelector('.skills-title h1');
-    const character = document.querySelector('#character-2');
-    const character_img = document.querySelector('#character-2 img');
-    const character_div = document.querySelector('#character-2 div');
+    const character = document.querySelector('#skills-character');
+    const character_img = document.querySelector('#skills-character img');
+    const character_div = document.querySelector('#skills-character div');
 
     // BEGIN
     window.addEventListener('scroll', function() {
@@ -129,14 +102,14 @@ function skillsHTML() {
         const viewport_height = window.innerHeight; // 100vh
 
         if(scroll_position >= viewport_height) {
-            character.style.animation = 'character-2-floating 3s ease-in-out infinite, character-2-entrance 1s ease-in-out forwards'; // character 2 entrance
+            character.style.animation = 'skills-character-floating 3s ease-in-out infinite, skills-character-entrance 1s ease-in-out forwards'; // character 2 entrance
 
             character.addEventListener('animationend', function() {
                 setTimeout(function() {
                     character_div.classList.add('active'); // activate character 2 surf board
                 }, 200); // delay
                 setTimeout(function() {
-                    character_img.style.animation = 'character-2-img-entrance 2s ease-out forwards'; // character 2 image entrance
+                    character_img.style.animation = 'skills-character-img-entrance 2s ease-out forwards'; // character 2 image entrance
                 }, 400); // delay
 
                 character_img.addEventListener('animationend', function() {
@@ -176,9 +149,9 @@ function achievementsHTML() {
     const achievements_div_1 = document.querySelector('.achievements-div-1');
     const achievements_div_2 = document.querySelector('.achievements-div-2');
     const achievements_title = document.querySelector('.achievements-title h1');
-    const character = document.querySelector('#character-3');
-    const character_img = document.querySelector('#character-3 img');
-    const character_div = document.querySelector('#character-3 div');
+    const character = document.querySelector('#achievements-character');
+    const character_img = document.querySelector('#achievements-character img');
+    const character_div = document.querySelector('#achievements-character div');
 
     // BEGIN
     window.addEventListener('scroll', function() {
@@ -187,14 +160,14 @@ function achievementsHTML() {
         const viewport_height = window.innerHeight * 2; // 200vh
 
         if(scroll_position >= viewport_height) {
-            character.style.animation = 'character-3-floating 3s ease-in-out infinite, character-3-entrance 1s ease-in-out forwards'; // character 3 entrance
+            character.style.animation = 'achievements-character-floating 3s ease-in-out infinite, achievements-character-entrance 1s ease-in-out forwards'; // character 3 entrance
 
             character.addEventListener('animationend', function() {
                 setTimeout(function() {
                     character_div.classList.add('active'); // activate character 3 surf board
                 }, 200); // delay
                 setTimeout(function() {
-                    character_img.style.animation = 'character-3-img-entrance 2s ease-out forwards'; // character 3 image entrance
+                    character_img.style.animation = 'achievements-character-img-entrance 2s ease-out forwards'; // character 3 image entrance
                 }, 400); // delay
 
                 character_img.addEventListener('animationend', function() {

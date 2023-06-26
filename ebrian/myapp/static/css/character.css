@@ -1,97 +1,5 @@
-/*CHARACTER 1*/
-#character-1 {
-    position: absolute;
-    bottom: 6%;
-    left: 10%;
-    opacity: 0;
-    z-index: 2;
-    width: 200px;
-    height: 300px;
-}
-#character-1 img {
-    position: relative;
-    bottom: 0;
-    left: 40%;
-    transform: translateX(-50%);
-    opacity: 0;
-    z-index: 2;
-    width: auto;
-    height: 90%;
-}
-#character-1 div {
-    background-color: rgb(25, 25, 25);
-    position: relative;
-    bottom: 60px;
-    z-index: 1;
-    width: 90%;
-    height: 30%;
-    border-top: 1px solid darkslategray;
-    border-bottom: 10px solid darkslategray;
-    border-left: 5px solid darkslategray;
-    border-right: 1px solid darkslategray;
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
-}
-#character-1 div:hover {
-    border-top: 1px solid cyan;
-    border-bottom: 10px solid cyan;
-    border-left: 5px solid cyan;
-    border-right: 1px solid cyan;
-    box-shadow: 0px 4px 4px rgba(0, 255, 255, 0.8);
-    transform: scale(1.2);
-}
-#character-1 div.active {
-    border-top: 1px solid cyan;
-    border-bottom: 10px solid cyan;
-    border-left: 5px solid cyan;
-    border-right: 1px solid cyan;
-    box-shadow: 0px 4px 4px rgba(0, 255, 255, 0.8);
-    transform: scale(1.2);
-}
-@keyframes character-1-floating { /*CHARACTER 1 ANIMATION*/
-    0% {
-        transform: translate(0, 0);
-    }
-    50% {
-        transform: translate(0, 10px);
-    }
-    100% {
-        transform: translate(0, 0);
-    }
-}
-@keyframes character-1-entrance {
-    0% {
-        bottom: 50%;
-        left: -50%;
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes character-1-img-entrance {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    70% {
-        opacity: 0.25;
-    }
-    80% {
-        opacity: 0.75;
-    }
-    90% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 /*CHARACTER 2*/
-#character-2 {
+#skills-character {
     position: absolute;
     bottom: 6%;
     right: 10%;
@@ -100,7 +8,7 @@
     width: 200px;
     height: 300px;
 }
-#character-2 img {
+#skills-character img {
     position: relative;
     bottom: 0;
     left: 50%;
@@ -110,7 +18,7 @@
     width: auto;
     height: 90%;
 }
-#character-2 div {
+#skills-character div {
     background-color: rgb(25, 25, 25);
     position: relative;
     bottom: 60px;
@@ -124,7 +32,7 @@
     border-radius: 50%;
     transition: transform 0.3s ease-out;
 }
-#character-2 div:hover {
+#skills-character div:hover {
     border-top: 1px solid cyan;
     border-bottom: 10px solid cyan;
     border-left: 1px solid cyan;
@@ -132,7 +40,7 @@
     box-shadow: 0px 4px 4px rgba(0, 255, 255, 0.8);
     transform: scale(1.2);
 }
-#character-2 div.active {
+#skills-character div.active {
     border-top: 1px solid cyan;
     border-bottom: 10px solid cyan;
     border-left: 1px solid cyan;
@@ -140,7 +48,7 @@
     box-shadow: 0px 4px 4px rgba(0, 255, 255, 0.8);
     transform: scale(1.2);
 }
-@keyframes character-2-floating { /*CHARACTER 2 ANIMATION*/
+@keyframes skills-character-floating { /*CHARACTER 2 ANIMATION*/
     0% {
         transform: translate(0, 0);
     }
@@ -151,7 +59,7 @@
         transform: translate(0, 0);
     }
 }
-@keyframes character-2-entrance {
+@keyframes skills-character-entrance {
     0% {
         right: -15%;
         opacity: 0;
@@ -160,7 +68,7 @@
         opacity: 1;
     }
 }
-@keyframes character-2-img-entrance {
+@keyframes skills-character-img-entrance {
     0% {
         opacity: 0;
     }
@@ -182,7 +90,7 @@
 }
 
 /*CHARACTER 3*/
-#character-3 {
+#achievements-character {
     position: absolute;
     bottom: 6%;
     left: 10%;
@@ -191,7 +99,7 @@
     width: 200px;
     height: 300px;
 }
-#character-3 img {
+#achievements-character img {
     position: relative;
     bottom: 0;
     left: 42%;
@@ -201,7 +109,7 @@
     width: auto;
     height: 90%;
 }
-#character-3 div {
+#achievements-character div {
     background-color: rgb(25, 25, 25);
     position: relative;
     bottom: 60px;
@@ -215,7 +123,7 @@
     border-radius: 50%;
     transition: transform 0.3s ease-out;
 }
-#character-3 div:hover {
+#achievements-character div:hover {
     border-top: 1px solid cyan  ;
     border-bottom: 10px solid cyan;
     border-left: 5px solid cyan;
@@ -223,7 +131,7 @@
     box-shadow: 0px 4px 4px rgba(0, 255, 255, 0.8);
     transform: scale(1.2);
 }
-#character-3 div.active {
+#achievements-character div.active {
     border-top: 1px solid cyan  ;
     border-bottom: 10px solid cyan;
     border-left: 5px solid cyan;
@@ -231,7 +139,7 @@
     box-shadow: 0px 4px 4px rgba(0, 255, 255, 0.8);
     transform: scale(1.2);
 }
-@keyframes character-3-floating { /*CHARACTER 3 ANIMATION*/
+@keyframes achievements-character-floating { /*CHARACTER 3 ANIMATION*/
     0% {
         transform: translate(0, 0);
     }
@@ -242,7 +150,7 @@
         transform: translate(0, 0);
     }
 }
-@keyframes character-3-entrance {
+@keyframes achievements-character-entrance {
     0% {
         left: -15%;
         opacity: 0;
@@ -251,7 +159,7 @@
         opacity: 1;
     }
 }
-@keyframes character-3-img-entrance {
+@keyframes achievements-character-img-entrance {
     0% {
         opacity: 0;
     }
