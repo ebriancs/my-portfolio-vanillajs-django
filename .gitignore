@@ -9,4 +9,3 @@ venv/
 
 # ignore pycache
 *__pycache__/
-*.pyc
