@@ -8,6 +8,7 @@
   padding: 20px 40px;
   z-index: 2;
   display: none;
+  border: 1px solid dimgray;
   border-radius: 5px;
 }
 #message-btn-close {
@@ -59,7 +60,7 @@
   border-radius: 3px;
 }
 #message-form-btn-submit {
-  background-color: whitesmoke;
+  background-color: olivedrab;
   width: 30%;
   margin: auto;
   padding: 10px;
