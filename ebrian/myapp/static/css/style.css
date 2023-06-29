@@ -55,6 +55,14 @@ body {
 #con-5 { /*FOOTER*/
     display: none;
 }
+/*
+#loader, #con-1 {
+    display: none;
+}
+#content, #con-4, #con-5 {
+    display: block;
+}
+*/
 @keyframes loader-exit {
     from {
         opacity: 1;

@@ -322,6 +322,7 @@ function messageHTML() {
     const message = document.getElementById('message');
     const message_i = document.getElementById('message-i');
     const message_btn_close = document.getElementById('message-btn-close');
+    const message_form_btn_submit = document.getElementById('message-form-btn-submit');
 
     message_i.addEventListener('click', function() { // OPEN MESSAGE
         message.style.display = 'block';
@@ -334,5 +335,17 @@ function messageHTML() {
             message.style.display = 'none';
             message.style.animation = '';
         }, { once: true });
+    });
+
+    message.addEventListener('submit', function() {
+        let message_success_div = document.createElement('div');
+        message_success_div.className = 'message-success-div';
+
+        let message_success_p = document.createElement('p');
+        message_success_p.className = 'message-success-p';
+        message_success_p.textContent = 'Message sent successfully!';
+        message_success_div.appendChild(message_success_p);
+
+        document.body.appendChild(message_success_div);
     });
 }

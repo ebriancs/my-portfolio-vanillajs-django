@@ -9,15 +9,11 @@ from django.contrib import messages
 
 # MESSAGES
 def message(request):
-    context = {}
     if request.method == 'POST':
         form = MessageForm(request.POST)
         if form.is_valid():
             form.save()
             form = MessageForm()
-            context = {
-                'form': form,
-            }
     else:
         form = MessageForm()
     
