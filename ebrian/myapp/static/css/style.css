@@ -23,8 +23,22 @@ body {
     justify-content: center;
     text-align: center;
 }
+#loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loader h2 {
+    color: darkorange;
+}
 #content {
-    display: block;
+    display: none;
 }
 #con-1 { /*BASE*/
     display: block;
@@ -40,4 +54,22 @@ body {
 }
 #con-5 { /*FOOTER*/
     display: none;
+}
+@keyframes loader-exit {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: 0;
+    }
+}
+@keyframes content-entrance {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        display: block;
+    }
 }

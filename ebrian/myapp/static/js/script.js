@@ -1,8 +1,20 @@
+window.addEventListener('DOMContentLoaded', function() {
+    const loader = document.getElementById('loader');
+    loader.style.display = 'flex';
+});
 window.addEventListener('load', function() {
-    // FUNCTIONS
-    disableHTML();
-    window.addEventListener('resize', disableHTML);
-    baseHTML();
+    const loader = document.getElementById('loader');
+    const content = document.getElementById('content');
+
+    loader.style.animation = 'loader-exit 1s ease-in-out forwards';
+    loader.addEventListener('animationend', function() {
+        content.style.animation = 'content-entrance 1s ease-in-out forwards';
+
+        // FUNCTIONS
+        disableHTML();
+        window.addEventListener('resize', disableHTML);
+        baseHTML();
+    });
 });
 
 function disableHTML() {
