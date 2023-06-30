@@ -1,4 +1,3 @@
-/*
 window.addEventListener('DOMContentLoaded', function() {
     const loader = document.getElementById('loader');
     loader.style.display = 'flex';
@@ -17,7 +16,6 @@ window.addEventListener('load', function() {
         baseHTML();
     });
 });
-*/
 
 function disableHTML() {
     const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -352,23 +350,6 @@ function messageHTML() {
         document.body.appendChild(message_success_div);
     });
 }
-
-function test_contactHTML() {
-    const contact_div_1 = document.querySelector('.contact-div-1');
-
-    contact_div_1.style.animation = 'contact-div-1-entrance 2s ease-out forwards';
-
-    contact_div_1.addEventListener('animationend', function() {
-        const a_contact = document.querySelector('.a-contact');
-        a_contact.classList.remove('a-contact'); // NAVIGATION LINK CHANGE
-
-        // FUNCTION CALL
-        detailsHTML();
-        messageHTML();
-        footerHTML();
-    });
-}
-test_contactHTML();
 
 function footerHTML() {
     const images_ref_link = document.getElementById('images-ref-link');
