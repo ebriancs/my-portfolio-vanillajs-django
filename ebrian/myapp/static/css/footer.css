@@ -57,3 +57,59 @@ footer {
     flex: 1;
     margin: 0;
 }
+
+/* IMAGE REFERRENCE */
+#images-ref-link:hover {
+    opacity: 0.8;
+}
+.images-ref {
+    background-color: dimgray;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 40px 60px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 3px 0 0;
+    box-sizing: border-box;
+}
+.images-ref a {
+    margin: 3px 0;
+    text-align: center;
+    text-decoration: underline;
+    color: darkblue;
+    transition: transform 0.3s;
+}
+.images-ref a:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+.images-ref-close {
+    background-color: transparent;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+.images-ref-close:hover {
+    transform: scale(1.1);
+}
+@keyframes images-ref-entrance {
+    from {
+        transform: translate(-100%, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+@keyframes images-ref-exit {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-100%, 0);
+    }
+}

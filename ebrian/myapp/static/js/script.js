@@ -1,3 +1,4 @@
+/*
 window.addEventListener('DOMContentLoaded', function() {
     const loader = document.getElementById('loader');
     loader.style.display = 'flex';
@@ -16,6 +17,7 @@ window.addEventListener('load', function() {
         baseHTML();
     });
 });
+*/
 
 function disableHTML() {
     const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -88,7 +90,7 @@ function baseHTML() {
 
     setTimeout(function() {
         const con2 = document.getElementById('con-2');
-        con2.style.display = 'block'; // display skills container
+        con2.style.display = 'block'; // SKILLS
 
         // FUNCTION CALL
         console.log('skillsHTML activated');
@@ -114,35 +116,35 @@ function skillsHTML() {
         const viewport_height = window.innerHeight; // 100vh
 
         if(scroll_position >= viewport_height) {
-            character.style.animation = 'skills-character-floating 3s ease-in-out infinite, skills-character-entrance 1s ease-in-out forwards'; // character 2 entrance
+            character.style.animation = 'skills-character-floating 3s ease-in-out infinite, skills-character-entrance 1s ease-in-out forwards'; // CHARACTER ENTRANCE
 
             character.addEventListener('animationend', function() {
                 setTimeout(function() {
-                    character_div.classList.add('active'); // activate character 2 surf board
+                    character_div.classList.add('active'); // SURF BOARD ON
                 }, 200); // delay
                 setTimeout(function() {
-                    character_img.style.animation = 'skills-character-img-entrance 2s ease-out forwards'; // character 2 image entrance
+                    character_img.style.animation = 'skills-character-img-entrance 2s ease-out forwards';
                 }, 400); // delay
 
                 character_img.addEventListener('animationend', function() {
                     setTimeout(function() {
-                        character_div.classList.remove('active'); // deactivate character 2 surf board
+                        character_div.classList.remove('active'); // SURF BOARD OFF
                     }, 400); // delay
                     setTimeout(function() {
-                        skills_div_1.style.animation = 'skills-div-1-entrance 1s ease forwards'; // skills div 1 entrance
-                        skills_title.style.animation = 'skills-title-entrance 1s ease forwards'; // skills title entrance
+                        skills_div_1.style.animation = 'skills-div-1-entrance 1s ease forwards';
+                        skills_title.style.animation = 'skills-title-entrance 1s ease forwards';
                     }, 600); // delay
                     
                     skills_div_1.addEventListener('animationend', function() {
 
-                        skills_div_2.style.animation = 'skills-div-2-entrance 1s ease-out forwards'; // skills div 2 entrance
+                        skills_div_2.style.animation = 'skills-div-2-entrance 1s ease-out forwards';
                         
                         const a_skills = document.querySelector('.a-skills');
-                        a_skills.classList.remove('a-skills'); // navigation link from red to cyan
+                        a_skills.classList.remove('a-skills'); // NAVIGATION LINK CHANGE
 
                         setTimeout(function() {
                             const con3 = document.getElementById('con-3');
-                            con3.style.display = 'block'; // display achievements container
+                            con3.style.display = 'block'; // ACHIEVEMENTS
 
                             // FUNCTION CALL
                             console.log('achievementsHTML activated');
@@ -172,36 +174,36 @@ function achievementsHTML() {
         const viewport_height = window.innerHeight * 2; // 200vh
 
         if(scroll_position >= viewport_height) {
-            character.style.animation = 'achievements-character-floating 3s ease-in-out infinite, achievements-character-entrance 1s ease-in-out forwards'; // character 3 entrance
+            character.style.animation = 'achievements-character-floating 3s ease-in-out infinite, achievements-character-entrance 1s ease-in-out forwards'; // CHARACTER ENTRANCE
 
             character.addEventListener('animationend', function() {
                 setTimeout(function() {
-                    character_div.classList.add('active'); // activate character 3 surf board
+                    character_div.classList.add('active'); // SURF BOARD ON
                 }, 200); // delay
                 setTimeout(function() {
-                    character_img.style.animation = 'achievements-character-img-entrance 2s ease-out forwards'; // character 3 image entrance
+                    character_img.style.animation = 'achievements-character-img-entrance 2s ease-out forwards';
                 }, 400); // delay
 
                 character_img.addEventListener('animationend', function() {
                     setTimeout(function() {
-                        character_div.classList.remove('active'); // deactivate character 3 surf board
+                        character_div.classList.remove('active'); // SURF BOARD OFF
                     }, 400); // delay
                     setTimeout(function() {
-                        achievements_div_1.style.animation = 'achievements-div-1-entrance 1s ease forwards'; // achievements div 1 entrance
-                        achievements_title.style.animation = 'achievements-title-entrance 1s ease forwards'; // achievements title entrance
+                        achievements_div_1.style.animation = 'achievements-div-1-entrance 1s ease forwards';
+                        achievements_title.style.animation = 'achievements-title-entrance 1s ease forwards';
                     }, 600); // delay
                     
                     achievements_div_1.addEventListener('animationend', function() {
-                        achievements_div_2.style.animation = 'achievements-div-2-entrance 1s ease-out forwards'; // achievements div 2 entrance
+                        achievements_div_2.style.animation = 'achievements-div-2-entrance 1s ease-out forwards';
 
                         const a_achievements = document.querySelector('.a-achievements');
-                        a_achievements.classList.remove('a-achievements'); // navigation link from red to cyan
+                        a_achievements.classList.remove('a-achievements'); // NAVIGATION LINK CHANGE
 
                         setTimeout(function() {
                             const con4 = document.getElementById('con-4');
                             const con5 = document.getElementById('con-5');
-                            con4.style.display = 'block'; // display contact container
-                            con5.style.display = 'block'; // display footer container
+                            con4.style.display = 'block'; // CONTACT
+                            con5.style.display = 'block'; // FOOTER
 
                             // FUNCTION CALL
                             console.log('contactHTML activated');
@@ -213,7 +215,7 @@ function achievementsHTML() {
         }
     });
 
-    function slider() { // list of achievements slider
+    function slider() { // ACHIEVEMENTS LIST
         const slider_items = document.querySelectorAll('.achievements-div-2-items');
         const slider_next = document.querySelector('.achievements-div-2-next');
         const slider_prev = document.querySelector('.achievements-div-2-prev');
@@ -277,18 +279,19 @@ function contactHTML() {
     window.addEventListener('scroll', function() {
         // VARIBALES
         const scroll_position = window.scrollY || window.pageYOffset;
-        const viewport_height = window.innerHeight * 3; // 300vh
+        const viewport_height = window.innerHeight; // 300vh
 
         if(scroll_position >= viewport_height) {
-            contact_div_1.style.animation = 'contact-div-1-entrance 2s ease-out forwards'; // contact div 1 entrance
+            contact_div_1.style.animation = 'contact-div-1-entrance 2s ease-out forwards';
 
             contact_div_1.addEventListener('animationend', function() {
                 const a_contact = document.querySelector('.a-contact');
-                a_contact.classList.remove('a-contact'); // navigation link from red to cyan
+                a_contact.classList.remove('a-contact'); // NAVIGATION LINK CHANGE
 
                 // FUNCTION CALL
                 detailsHTML();
                 messageHTML();
+                footerHTML();
             });
         }
     });
@@ -347,5 +350,64 @@ function messageHTML() {
         message_success_div.appendChild(message_success_p);
 
         document.body.appendChild(message_success_div);
+    });
+}
+
+function test_contactHTML() {
+    const contact_div_1 = document.querySelector('.contact-div-1');
+
+    contact_div_1.style.animation = 'contact-div-1-entrance 2s ease-out forwards';
+
+    contact_div_1.addEventListener('animationend', function() {
+        const a_contact = document.querySelector('.a-contact');
+        a_contact.classList.remove('a-contact'); // NAVIGATION LINK CHANGE
+
+        // FUNCTION CALL
+        detailsHTML();
+        messageHTML();
+        footerHTML();
+    });
+}
+test_contactHTML();
+
+function footerHTML() {
+    const images_ref_link = document.getElementById('images-ref-link');
+
+    images_ref_link.addEventListener('click', function() {
+        let images_ref = document.createElement('div');
+        images_ref.className = 'images-ref';
+
+        let images_ref_close = document.createElement('button');
+        images_ref_close.className = 'images-ref-close';
+        images_ref_close.innerHTML = '&#10006';
+        images_ref.appendChild(images_ref_close);
+
+        let ref_1 = document.createElement('a');
+        ref_1.href = 'https://www.vecteezy.com/free-png/isolated';
+        ref_1.target  = '_blank';
+        ref_1.innerHTML = 'Isolated PNGs by Vecteezy';
+
+        let ref_2 = document.createElement('a');
+        ref_2.href = 'https://www.vecteezy.com/free-png/cartoon';
+        ref_2.target  = '_blank';
+        ref_2.innerHTML = 'Cartoon PNGs by Vecteezy';
+
+        let ref_3 = document.createElement('a');
+        ref_3.href = 'https://www.vecteezy.com/free-png/cartoon';
+        ref_3.target  = '_blank';
+        ref_3.innerHTML = 'Cartoon PNGs by Vecteezy';
+
+        let images_ref_elements = [ref_1, ref_2, ref_3];
+        for(let i = 0; i < images_ref_elements.length; i++) {
+            images_ref.appendChild(images_ref_elements[i]);
+        }
+        
+        document.body.appendChild(images_ref);
+
+        images_ref.style.animation = 'images-ref-entrance 1s ease forwards';
+
+        images_ref_close.addEventListener('click', function() {
+            images_ref.style.animation = 'images-ref-exit 1s ease forwards';
+        });
     });
 }
