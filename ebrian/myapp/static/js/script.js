@@ -277,7 +277,7 @@ function contactHTML() {
     window.addEventListener('scroll', function() {
         // VARIBALES
         const scroll_position = window.scrollY || window.pageYOffset;
-        const viewport_height = window.innerHeight; // 300vh
+        const viewport_height = window.innerHeight * 3; // 300vh
 
         if(scroll_position >= viewport_height) {
             contact_div_1.style.animation = 'contact-div-1-entrance 2s ease-out forwards';
@@ -352,6 +352,7 @@ function messageHTML() {
 }
 
 function footerHTML() {
+    const footer = document.getElementById('footer');
     const images_ref_link = document.getElementById('images-ref-link');
 
     images_ref_link.addEventListener('click', function() {
@@ -383,7 +384,7 @@ function footerHTML() {
             images_ref.appendChild(images_ref_elements[i]);
         }
         
-        document.body.appendChild(images_ref);
+        footer.appendChild(images_ref);
 
         images_ref.style.animation = 'images-ref-entrance 1s ease forwards';
 
